@@ -130,14 +130,14 @@ exports.commands = {
 				this.sclog();
 				var res = CommandParser.loadCommands(true) || [];
 				if (!res.length) {
-					return this.reply('Commands hotpatched');
+					return this.reply('AI Reloaded');
 				}
 				return this.reply('Some command files crashed: ' + res.join(", "));
 			case 'features':
 				this.sclog();
 				var errs = reloadFeatures() || [];
 				if (!errs.length) {
-					return this.reply('Features hotpatched');
+					return this.reply('Features Reloaded');
 				}
 				return this.reply('Some features crashed: ' + errs.join(", "));
 			case 'feature':
@@ -153,7 +153,7 @@ exports.commands = {
 						return this.reply("Error: Feature " + args[1] + " crashed");
 					}
 				} else {
-					return this.reply("Feature: " + args[1] + " hotpatched");
+					return this.reply("Feature: " + args[1] + " Reloaded");
 				}
 				break;
 			case 'commandparser':
@@ -210,7 +210,7 @@ exports.commands = {
 			case 'languages':
 				this.sclog();
 				var _errs = Tools.loadTranslations(true) || [];
-				if (!_errs.length) return this.reply('Languages hotpatched');
+				if (!_errs.length) return this.reply('Languages Reloaded');
 				this.reply('Some languages crashed: ' + _errs.join(", "));
 				break;
 			default:

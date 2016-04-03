@@ -8,23 +8,23 @@ exports.commands = {
 	credits: 'about',
 	bot: 'about',
 	about: function () {
-		this.restrictReply(this.trad('about') + ". " + this.trad('author') + ": " + Settings.package.author.name + ". (" + Settings.package.homepage + ")", 'info');
+		this.restrictReply('');
 	},
 
 	git: 'github',
 	github: function () {
-		if (Settings.package.repository) this.restrictReply(Tools.stripCommands(Settings.package.repository.url), 'info');
+		this.restrictReply('');
 	},
 
 	botversion: 'version',
 	version: function () {
-		this.restrictReply(Tools.stripCommands(Settings.package.version), 'info');
+		this.restrictReply('');
 	},
 
 	guide: 'help',
 	botguide: 'help',
 	help: function () {
-		this.restrictReply(this.trad('guide') + ': ' + (Config.botguide || (Settings.package.homepage + "/blob/master/commands/README.md")), 'info');
+		this.restrictReply('');
 	},
 
 	bottime: 'time',

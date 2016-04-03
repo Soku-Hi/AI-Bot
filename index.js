@@ -22,7 +22,7 @@ console.log((
 	'-----------------------------------------------\n' +
 	'   Welcome to Pokemon Showdown Bot for Node!   \n' +
 	'-----------------------------------------------\n'
-).yellow);
+).red);
 
 global.Tools = require('./tools.js');
 var cmdArgs = process.argv.slice(2);
